@@ -1,39 +1,144 @@
 {
   "dogs": [
     {
-      "name": "Cydney",
-      "image": "/src/assets/blue-heeler.png",
-      "description": "East Oro Bugatti South Supervisor Product cumbersome",
+      "name": "Rebecca",
+      "image": "/src/assets/dalmation.png",
+      "description": "Nebraska Shoes Adaptive Money Metal panel Music",
+      "isFavorite": false,
+      "id": 0
+    },
+    {
+      "name": "Nicholas",
+      "image": "/src/assets/boxer.png",
+      "description": "Netherlands Forward male Mazda Yemeni platforms unnecessarily",
       "isFavorite": true,
+      "id": 1
+    },
+    {
+      "name": "Lucile",
+      "image": "/src/assets/dalmation.png",
+      "description": "Tamiami overriding Orchestrator Gasoline twig",
+      "isFavorite": true,
+      "id": 2
+    },
+    {
+      "name": "Raphaelle",
+      "image": "/src/assets/corgi.png",
+      "description": "Crest Pizza invoice Cyclocross Games",
+      "isFavorite": true,
+      "id": 3
+    },
+    {
+      "name": "Jany",
+      "image": "/src/assets/dalmation.png",
+      "description": "Southeast Francium joule Rufiyaa Supervisor primary mobile Toys",
+      "isFavorite": true,
+      "id": 4
+    },
+    {
+      "name": "Chester",
+      "image": "/src/assets/boxer.png",
+      "description": "Northwest SQL Bicycle Euro Francium Hybrid Assistant practical",
+      "isFavorite": true,
+      "id": 5
+    },
+    {
+      "name": "Cassandra",
+      "image": "/src/assets/blue-heeler.png",
+      "description": "Southwest optical Intersex Folk Northwest Buckinghamshire Frozen South",
+      "isFavorite": false,
       "id": 6
     },
     {
-      "name": "Jalon",
-      "image": "/src/assets/blue-heeler.png",
-      "description": "Innovative Money Tuna Palladium Handmade Tricycle versus black",
+      "name": "Kasandra",
+      "image": "/src/assets/corgi.png",
+      "description": "ivory Global Cadillac tan Non",
       "isFavorite": false,
       "id": 7
     },
     {
-      "name": "Juanita",
+      "name": "Elijah",
+      "image": "/src/assets/blue-heeler.png",
+      "description": "omnis clumsy Dynamic Home Data",
+      "isFavorite": false,
+      "id": 8
+    },
+    {
+      "name": "Rodrick",
       "image": "/src/assets/dalmation.png",
-      "description": "redefine online feed bus unaccountably Hybrid Turnpike",
+      "description": "Global Tesla Aruban unlike Hybrid",
       "isFavorite": true,
       "id": 9
     },
     {
-      "name": "Laurine",
+      "name": "Alford",
+      "image": "/src/assets/chihuahua.avif",
+      "description": "hertz tolerate Mississippi Southeast epoch",
+      "isFavorite": false,
+      "id": 10
+    },
+    {
+      "name": "Lucas",
+      "image": "/src/assets/dalmation.png",
+      "description": "mobile Silicon Country far violet applications Soft",
+      "isFavorite": true,
+      "id": 11
+    },
+    {
+      "name": "Kiara",
+      "image": "/src/assets/dalmation.png",
+      "description": "Configuration Markets Northeast backing Fantastic",
+      "isFavorite": true,
+      "id": 12
+    },
+    {
+      "name": "Flavio",
+      "image": "/src/assets/chihuahua.avif",
+      "description": "Tools lime Developer Frozen connecting",
+      "isFavorite": true,
+      "id": 13
+    },
+    {
+      "name": "Nadia",
       "image": "/src/assets/corgi.png",
-      "description": "Sausages pfft Rolls navigating male",
+      "description": "Northeast morph Luxurious Extended Rubber man mid",
+      "isFavorite": false,
+      "id": 14
+    },
+    {
+      "name": "Camylle",
+      "image": "/src/assets/blue-heeler.png",
+      "description": "positive beneath Dynamic monitor tan",
+      "isFavorite": true,
+      "id": 15
+    },
+    {
+      "name": "Pierre",
+      "image": "/src/assets/blue-heeler.png",
+      "description": "North firewall Clothing circuit Security",
+      "isFavorite": true,
+      "id": 16
+    },
+    {
+      "name": "Karine",
+      "image": "/src/assets/cowardly.png",
+      "description": "Folding debitis West Customer Funk red lumen blue",
+      "isFavorite": true,
+      "id": 17
+    },
+    {
+      "name": "Trinity",
+      "image": "/src/assets/blue-heeler.png",
+      "description": "San Product input Passenger Regional green aggregate",
       "isFavorite": true,
       "id": 18
     },
     {
-      "name": "Jim",
-      "description": "Jim is a dog, a very cute dog",
-      "isFavorite": false,
-      "image": "/src/assets/chihuahua.avif",
-      "id": 20
+      "name": "Alec",
+      "image": "/src/assets/blue-heeler.png",
+      "description": "frame Chicken hacking Diesel Customer",
+      "isFavorite": true,
+      "id": 19
     }
   ]
 }

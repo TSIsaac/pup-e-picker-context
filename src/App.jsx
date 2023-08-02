@@ -4,46 +4,24 @@ import { CreateDogForm } from "./Components/CreateDogForm";
 import { Dogs } from "./Components/Dogs";
 import { Section } from "./Components/Section";
 import "./fonts/RubikBubbles-Regular.ttf";
-import { addDogToDb } from "./fetch/add-dog";
-import { updateFavoriteForDog } from "./fetch/update-favorite";
-import { deleteDogFromDb } from "./fetch/delete-dog-from-db";
+import { useDogContext } from "./DogContext";
 
 function App() {
+  // Instead of defining local state for dogs and fetch functions,
+  // we'll use the context hook to access them.
+  const {
+    dogs,
+    addDog,
+    deleteDog,
+    unfavoriteDog,
+    favoriteDog,
+    refetchDogs,
+  } = useDogContext();
+
   const [showComponent, setShowComponent] = useState("all-dogs");
-  const [dogs, setDogs] = useState([]);
 
-  const refetchDogs = () => {
-    fetch("http://localhost:3000/dogs")
-      .then((response) => response.json())
-      .then(setDogs);
-  };
-
-  const addDog = (dog) => {
-    addDogToDb({
-      name: dog.name,
-      description: dog.description,
-      image: dog.image,
-    }).then(() => {
-      refetchDogs();
-    });
-  };
-
-  const deleteDog = (dogId) => {
-    deleteDogFromDb(dogId).then(() => refetchDogs());
-  };
-
-  const unfavoriteDog = (dogId) => {
-    updateFavoriteForDog({ dogId, isFavorite: false }).then(() =>
-      refetchDogs()
-    );
-  };
-
-  const favoriteDog = (dogId) => {
-    updateFavoriteForDog({ dogId, isFavorite: true }).then(() => refetchDogs());
-  };
-
-  const unfavorited = dogs.filter((dog) => dog.isFavorite === false);
-  const favorited = dogs.filter((dog) => dog.isFavorite === true);
+  const unfavorited = dogs.filter((dog) => !dog.isFavorite);
+  const favorited = dogs.filter((dog) => dog.isFavorite);
 
   let filteredDogs = (() => {
     if (showComponent === "favorite-dogs") {
@@ -59,30 +37,30 @@ function App() {
   const onClickFavorited = () => {
     if (showComponent === "favorite-dogs") {
       setShowComponent("all-dogs");
-      return;
+    } else {
+      setShowComponent("favorite-dogs");
     }
-    setShowComponent("favorite-dogs");
   };
 
   const onClickUnfavorited = () => {
     if (showComponent === "unfavorite-dogs") {
       setShowComponent("all-dogs");
-      return;
+    } else {
+      setShowComponent("unfavorite-dogs");
     }
-    setShowComponent("unfavorite-dogs");
   };
 
   const onClickCreateDog = () => {
     if (showComponent === "create-dog-form") {
       setShowComponent("all-dogs");
-      return;
+    } else {
+      setShowComponent("create-dog-form");
     }
-    setShowComponent("create-dog-form");
   };
 
   useEffect(() => {
     refetchDogs();
-  }, []);
+  }, [refetchDogs]);
 
   return (
     <div className="App">
@@ -118,3 +96,4 @@ function App() {
 }
 
 export default App;
+
