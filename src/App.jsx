@@ -7,16 +7,8 @@ import "./fonts/RubikBubbles-Regular.ttf";
 import { useDogContext } from "./DogContext";
 
 function App() {
-  // Instead of defining local state for dogs and fetch functions,
-  // we'll use the context hook to access them.
-  const {
-    dogs,
-    addDog,
-    deleteDog,
-    unfavoriteDog,
-    favoriteDog,
-    refetchDogs,
-  } = useDogContext();
+  const { dogs, addDog, deleteDog, unfavoriteDog, favoriteDog, refetchDogs } =
+    useDogContext();
 
   const [showComponent, setShowComponent] = useState("all-dogs");
 
@@ -96,4 +88,3 @@ function App() {
 }
 
 export default App;
-

@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { addDogToDb } from './fetch/add-dog';
-import { updateFavoriteForDog } from './fetch/update-favorite';
-import { deleteDogFromDb } from './fetch/delete-dog-from-db';
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { addDogToDb } from "./fetch/add-dog";
+import { updateFavoriteForDog } from "./fetch/update-favorite";
+import { deleteDogFromDb } from "./fetch/delete-dog-from-db";
 const DogContext = createContext({
   dogs: [],
   addDog: () => {},
@@ -14,10 +14,10 @@ export function DogProvider({ children }) {
   const [dogs, setDogs] = useState([]);
 
   const refetchDogs = () => {
-    fetch('http://localhost:3000/dogs')
+    fetch("http://localhost:3000/dogs")
       .then((response) => response.json())
       .then(setDogs)
-      .catch((error) => console.error('Error fetching dogs:', error));
+      .catch((error) => console.error("Error fetching dogs:", error));
   };
 
   const addDog = (dog) => {
@@ -29,25 +29,29 @@ export function DogProvider({ children }) {
       .then(() => {
         refetchDogs();
       })
-      .catch((error) => console.error('Error adding dog:', error));
+      .catch((error) => console.error("Error adding dog:", error));
   };
 
   const deleteDog = (dogId) => {
     deleteDogFromDb(dogId)
       .then(() => refetchDogs())
-      .catch((error) => console.error('Error deleting dog:', error));
+      .catch((error) => console.error("Error deleting dog:", error));
   };
 
   const unfavoriteDog = (dogId) => {
     updateFavoriteForDog({ dogId, isFavorite: false })
       .then(() => refetchDogs())
-      .catch((error) => console.error('Error updating favorite status:', error));
+      .catch((error) =>
+        console.error("Error updating favorite status:", error)
+      );
   };
 
   const favoriteDog = (dogId) => {
     updateFavoriteForDog({ dogId, isFavorite: true })
       .then(() => refetchDogs())
-      .catch((error) => console.error('Error updating favorite status:', error));
+      .catch((error) =>
+        console.error("Error updating favorite status:", error)
+      );
   };
 
   useEffect(() => {
